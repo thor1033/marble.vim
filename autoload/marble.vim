@@ -3,11 +3,11 @@
 let g:marble#palette           = {}
 let g:marble#palette.fg        = ['#07060B', 253]
 
-let g:marble#palette.bglighter = ['#DBD7D4', 238]
-let g:marble#palette.bglight   = ['#DBD7D4', 237]
-let g:marble#palette.bg        = ['#DBD7D4', 236]
-let g:marble#palette.bgdark    = ['#DBD7D4', 235]
-let g:marble#palette.bgdarker  = ['#DBD7D4', 234]
+let g:marble#palette.bglighter = ['#FFFFFF', 238]
+let g:marble#palette.bglight   = ['#FFFFFF', 237]
+let g:marble#palette.bg        = ['#FFFFFF', 236]
+let g:marble#palette.bgdark    = ['#FFFFFF', 235]
+let g:marble#palette.bgdarker  = ['#FFFFFF', 234]
 
 let g:marble#palette.comment   = ['#C1BDBB',  61]
 let g:marble#palette.selection = ['#8C8989', 239]

@@ -1,7 +1,7 @@
 " Palette: {{{
 
 let g:marble#palette           = {}
-let g:marble#palette.fg        = ['#F8F8F2', 253]
+let g:marble#palette.fg        = ['#07060B', 253]
 
 let g:marble#palette.bglighter = ['#DBD7D4', 238]
 let g:marble#palette.bglight   = ['#DBD7D4', 237]
@@ -31,7 +31,7 @@ let g:marble#palette.color_3  = '#3C3B3E'
 let g:marble#palette.color_4  = '#C1BDBB'
 let g:marble#palette.color_5  = '#2F2E32'
 let g:marble#palette.color_6  = '#222125'
-let g:marble#palette.color_7  = '#F8F8F2'
+let g:marble#palette.color_7  = '#07060B'
 let g:marble#palette.color_8  = '#C1BDBB'
 let g:marble#palette.color_9  = '#FF6E6E'
 let g:marble#palette.color_10 = '#69FF94'

@@ -39,7 +39,7 @@ let g:marble#palette.color_11 = '#FFFFA5'
 let g:marble#palette.color_12 = '#D6ACFF'
 let g:marble#palette.color_13 = '#FF92DF'
 let g:marble#palette.color_14 = '#A4FFFF'
-let g:marble#palette.color_15 = '#FFFFFF'
+let g:marble#palette.color_15 = '#07060B'
 
 " }}}
 

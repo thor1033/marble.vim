@@ -1,5 +1,3 @@
-" Palette: {{{
-
 let g:marble#palette           = {}
 let g:marble#palette.fg        = ['#07060B', 253]
 
@@ -41,8 +39,6 @@ let g:marble#palette.color_13 = '#FF92DF'
 let g:marble#palette.color_14 = '#A4FFFF'
 let g:marble#palette.color_15 = '#07060B'
 
-" }}}
-
 " Helper function that takes a variadic list of filetypes as args and returns
 " whether or not the execution of the ftplugin should be aborted.
 func! marble#should_abort(...)
@@ -53,5 +49,3 @@ func! marble#should_abort(...)
     endif
     return 0
 endfunction
-
-" vim: fdm=marker ts=2 sts=2 sw=2 fdl=0:

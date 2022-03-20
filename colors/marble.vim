@@ -1,20 +1,4 @@
-" Marble Theme: {{{
-"
-" https://github.com/zenorocha/marble-theme
-"
-" Copyright 2016, All rights reserved
-"
-" Code licensed under the MIT license
-" http://zenorocha.mit-license.org
-"
-" @author Trevor Heins <@heinst>
-" @author Éverton Ribeiro <nuxlli@gmail.com>
-" @author Derek Sifford <dereksifford@gmail.com>
-" @author Zeno Rocha <hi@zenorocha.com>
 scriptencoding utf8
-" }}}
-
-" Configuration: {{{
 
 if v:version > 580
   highlight clear
@@ -28,8 +12,6 @@ let g:colors_name = 'marble'
 if !(has('termguicolors') && &termguicolors) && !has('gui_running') && &t_Co != 256
   finish
 endif
-
-" Palette: {{{2
 
 let s:fg        = g:marble#palette.fg
 
@@ -66,9 +48,6 @@ if has('terminal')
   endfor
 endif
 
-" }}}2
-" User Configuration: {{{2
-
 if !exists('g:marble_bold')
   let g:marble_bold = 1
 endif
@@ -97,9 +76,6 @@ if !exists('g:marble_colorterm')
   let g:marble_colorterm = 1
 endif
 
-"}}}2
-" Script Helpers: {{{2
-
 let s:attrs = {
       \ 'bold': g:marble_bold == 1 ? 'bold' : 0,
       \ 'italic': g:marble_italic == 1 ? 'italic' : 0,
@@ -115,13 +91,6 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   let l:attr_list = filter(get(a:, 2, ['NONE']), 'type(v:val) == 1')
   let l:attrs = len(l:attr_list) > 0 ? join(l:attr_list, ',') : 'NONE'
 
-  " If the UI does not have full support for special attributes (like underline and
-  " undercurl) and the highlight does not explicitly set the foreground color,
-  " make the foreground the same as the attribute color to ensure the user will
-  " get some highlight if the attribute is not supported. The default behavior
-  " is to assume that terminals do not have full support, but the user can set
-  " the global variable `g:marble_full_special_attrs_support` explicitly if the
-  " default behavior is not desirable.
   let l:special = get(a:, 3, ['NONE', 'NONE'])
   if l:special[0] !=# 'NONE' && l:fg[0] ==# 'NONE' && !g:marble_full_special_attrs_support
     let l:fg[0] = l:special[0]
@@ -139,8 +108,6 @@ function! s:h(scope, fg, ...) " bg, attr_list, special
   execute join(l:hl_string, ' ')
 endfunction
 
-"}}}2
-" Marble Highlight Groups: {{{2
 
 call s:h('MarbleBgLight', s:none, s:bglight)
 call s:h('MarbleBgLighter', s:none, s:bglighter)
@@ -200,14 +167,9 @@ call s:h('MarbleDiffChange', s:orange, s:none)
 call s:h('MarbleDiffText', s:bg, s:orange)
 call s:h('MarbleDiffDelete', s:red, s:bgdark)
 
-" }}}2
-
-" }}}
-" User Interface: {{{
 
 set background=dark
 
-" Required as some plugins will overwrite
 call s:h('Normal', s:fg, g:marble_colorterm || has('gui_running') ? s:bg : s:none )
 call s:h('StatusLine', s:none, s:bglighter, [s:attrs.bold])
 call s:h('StatusLineNC', s:none, s:bglight)
@@ -249,21 +211,14 @@ hi! link Visual       MarbleSelection
 hi! link VisualNOS    Visual
 hi! link WarningMsg   MarbleOrangeInverse
 
-" }}}
-" Syntax: {{{
-
-" Required as some plugins will overwrite
 call s:h('MatchParen', s:green, s:none, [s:attrs.underline])
 call s:h('Conceal', s:cyan, s:none)
 
-" Neovim uses SpecialKey for escape characters only. Vim uses it for that, plus whitespace.
 if has('nvim')
   hi! link SpecialKey MarbleRed
   hi! link LspReferenceText MarbleSelection
   hi! link LspReferenceRead MarbleSelection
   hi! link LspReferenceWrite MarbleSelection
-  " Link old 'LspDiagnosticsDefault*' hl groups
-  " for backward compatibility with neovim v0.5.x
   hi! link LspDiagnosticsDefaultInformation DiagnosticInfo
   hi! link LspDiagnosticsDefaultHint DiagnosticHint
   hi! link LspDiagnosticsDefaultError DiagnosticError
@@ -333,6 +288,3 @@ hi! link helpHyperTextJump MarbleLink
 hi! link helpCommand MarblePurple
 hi! link helpExample MarbleGreen
 hi! link helpBacktick Special
-
-"}}}
-" vim: fdm=marker ts=2 sts=2 sw=2 fdl=0 et:

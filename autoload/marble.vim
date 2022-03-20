@@ -3,36 +3,36 @@
 let g:marble#palette           = {}
 let g:marble#palette.fg        = ['#F8F8F2', 253]
 
-let g:marble#palette.bglighter = ['#424450', 238]
-let g:marble#palette.bglight   = ['#343746', 237]
-let g:marble#palette.bg        = ['#282A36', 236]
-let g:marble#palette.bgdark    = ['#21222C', 235]
-let g:marble#palette.bgdarker  = ['#191A21', 234]
+let g:marble#palette.bglighter = ['#DBD7D4', 238]
+let g:marble#palette.bglight   = ['#DBD7D4', 237]
+let g:marble#palette.bg        = ['#DBD7D4', 236]
+let g:marble#palette.bgdark    = ['#DBD7D4', 235]
+let g:marble#palette.bgdarker  = ['#DBD7D4', 234]
 
-let g:marble#palette.comment   = ['#6272A4',  61]
-let g:marble#palette.selection = ['#44475A', 239]
-let g:marble#palette.subtle    = ['#424450', 238]
+let g:marble#palette.comment   = ['#C1BDBB',  61]
+let g:marble#palette.selection = ['#8C8989', 239]
+let g:marble#palette.subtle    = ['#A6A3A2', 238]
 
-let g:marble#palette.cyan      = ['#8BE9FD', 117]
-let g:marble#palette.green     = ['#50FA7B',  84]
-let g:marble#palette.orange    = ['#FFB86C', 215]
-let g:marble#palette.pink      = ['#FF79C6', 212]
-let g:marble#palette.purple    = ['#BD93F9', 141]
-let g:marble#palette.red       = ['#FF5555', 203]
-let g:marble#palette.yellow    = ['#F1FA8C', 228]
+let g:marble#palette.cyan      = ['#222125', 117]
+let g:marble#palette.green     = ['#716F70',  84]
+let g:marble#palette.orange    = ['#575557', 215]
+let g:marble#palette.pink      = ['#2F2E32', 212]
+let g:marble#palette.purple    = ['#C1BDBB', 141]
+let g:marble#palette.red       = ['#575557', 203]
+let g:marble#palette.yellow    = ['#3C3B3E', 228]
 
 "
 " ANSI
 "
 let g:marble#palette.color_0  = '#21222C'
-let g:marble#palette.color_1  = '#FF5555'
-let g:marble#palette.color_2  = '#50FA7B'
-let g:marble#palette.color_3  = '#F1FA8C'
-let g:marble#palette.color_4  = '#BD93F9'
-let g:marble#palette.color_5  = '#FF79C6'
-let g:marble#palette.color_6  = '#8BE9FD'
+let g:marble#palette.color_1  = '#575557'
+let g:marble#palette.color_2  = '#716F70'
+let g:marble#palette.color_3  = '#3C3B3E'
+let g:marble#palette.color_4  = '#C1BDBB'
+let g:marble#palette.color_5  = '#2F2E32'
+let g:marble#palette.color_6  = '#222125'
 let g:marble#palette.color_7  = '#F8F8F2'
-let g:marble#palette.color_8  = '#6272A4'
+let g:marble#palette.color_8  = '#C1BDBB'
 let g:marble#palette.color_9  = '#FF6E6E'
 let g:marble#palette.color_10 = '#69FF94'
 let g:marble#palette.color_11 = '#FFFFA5'
